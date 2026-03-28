@@ -1,0 +1,142 @@
+% Chapter 3 – Autonomous data-driven methods
+%
+% Compilation context
+% -------------------
+% This file is \input{} from main.tex at the repository root.
+% \graphicspath below therefore lists the path relative to the repo root so
+% that \includegraphics{} commands resolve correctly whether you compile
+% main.tex from the root *or* compile this file standalone.
+
+\graphicspath{{3.Autonomous/Figures/}{Figures/}}
+
+\chapter{Autonomous Data-Driven Methods}
+\label{ch:autonomous}
+
+\section{Introduction}
+
+This chapter presents autonomous data-driven frameworks for learning and
+predicting complex dynamical systems from observational data.
+
+% ── Figure: method framework ──────────────────────────────────────────────────
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{framework}
+  \caption{Overview of the autonomous data-driven framework.}
+  \label{fig:framework}
+\end{figure}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{2-D Cylinder Flow}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{Problem set-up}
+
+% ── Figure: cylinder schematic ────────────────────────────────────────────────
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{2D_Cylinder/cylinder_schematic}
+  \caption{Schematic of the 2-D cylinder flow configuration.}
+  \label{fig:cylinder_schematic}
+\end{figure}
+
+\subsection{Sensor placement}
+
+% ── Figure: cylinder scatter ──────────────────────────────────────────────────
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{2D_Cylinder/cylinder_scatter}
+  \caption{Sensor locations for the 2-D cylinder flow.}
+  \label{fig:cylinder_scatter}
+\end{figure}
+
+\subsection{Prediction results}
+
+% ── Figure: relative MSE contour ──────────────────────────────────────────────
+% NOTE: The filename contains a known typo ("Realtive") – kept as-is to match
+%       the file on disk.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{2D_Cylinder/Realtive_mse_contour}
+  \caption{Relative MSE contour for the 2-D cylinder flow predictions.}
+  \label{fig:cylinder_rel_mse}
+\end{figure}
+
+% ── Figure: kinetic energy (short window) ─────────────────────────────────────
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{2D_Cylinder/limitcyle_kineticenergy_short_gfd}
+  \caption{Kinetic energy of the limit cycle (short time window).}
+  \label{fig:cylinder_ke_short}
+\end{figure}
+
+% ── Figure: kinetic energy (long window) ──────────────────────────────────────
+% TODO: Add figure file 3.Autonomous/Figures/2D_Cylinder/limitcyle_kineticenergy_long_gfd.pdf
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{2D_Cylinder/limitcyle_kineticenergy_long_gfd}
+  \caption{Kinetic energy of the limit cycle (long time window).}
+  \label{fig:cylinder_ke_long}
+\end{figure}
+
+% ── Figure: relative MSE comparison plot ──────────────────────────────────────
+% TODO: Add figure file 3.Autonomous/Figures/2D_Cylinder/Limitcycle_relativemse_compplot_2.pdf
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{2D_Cylinder/Limitcycle_relativemse_compplot_2}
+  \caption{Comparison of relative MSE across methods for the cylinder limit
+           cycle.}
+  \label{fig:cylinder_mse_comp}
+\end{figure}
+
+% ── Figure: case 2 ────────────────────────────────────────────────────────────
+% TODO: Add figure file 3.Autonomous/Figures/2D_Cylinder/case2.pdf
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{2D_Cylinder/case2}
+  \caption{Case 2 results for the 2-D cylinder flow.}
+  \label{fig:cylinder_case2}
+\end{figure}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\section{Kuramoto--Sivashinsky Equation}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\subsection{Problem set-up ($L=22$, 8 observations)}
+
+% ── Figure: KS contour plot ───────────────────────────────────────────────────
+% TODO: Add figure file 3.Autonomous/Figures/KS/L22/L22_8obs/contour_plot.pdf
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{KS/L22/L22_8obs/contour_plot}
+  \caption{Contour plot of the Kuramoto--Sivashinsky solution ($L=22$,
+           8 observations).}
+  \label{fig:ks_contour}
+\end{figure}
+
+% ── Figure: KS kinetic energy prediction ──────────────────────────────────────
+% TODO: Add figure file 3.Autonomous/Figures/KS/L22/L22_8obs/ke_pred.pdf
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{KS/L22/L22_8obs/ke_pred}
+  \caption{Kinetic energy prediction for the KS equation ($L=22$,
+           8 observations).}
+  \label{fig:ks_ke_pred}
+\end{figure}
+
+% ── Figure: KS statistics ─────────────────────────────────────────────────────
+% TODO: Add figure file 3.Autonomous/Figures/KS/L22/L22_8obs/stats_KS22.pdf
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{KS/L22/L22_8obs/stats_KS22}
+  \caption{Statistical comparison for the KS equation ($L=22$).}
+  \label{fig:ks_stats}
+\end{figure}
+
+% ── Figure: KS eigenvalues ────────────────────────────────────────────────────
+% TODO: Add figure file 3.Autonomous/Figures/KS/L22/L22_8obs/eigenvalues.pdf
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\linewidth]{KS/L22/L22_8obs/eigenvalues}
+  \caption{Eigenvalue spectrum for the KS equation ($L=22$, 8 observations).}
+  \label{fig:ks_eigenvalues}
+\end{figure}
