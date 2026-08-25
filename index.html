@@ -50,16 +50,8 @@
             max-width: 1000px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
-        }
-
-        .masthead__logo {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--color-text);
-            text-decoration: none;
-            letter-spacing: 0.02em;
         }
 
         .masthead__menu {
@@ -157,13 +149,6 @@
         .content {
             flex: 1;
             min-width: 0;
-        }
-
-        .page__title {
-            font-size: 2.1rem;
-            font-weight: 700;
-            color: var(--color-text);
-            margin-bottom: 1.5rem;
         }
 
         .content p {
@@ -300,7 +285,6 @@
     <!-- Masthead -->
     <header class="masthead">
         <div class="masthead__inner">
-            <a href="#home" class="masthead__logo">Priyam Gupta</a>
             <ul class="masthead__menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#publications">Publications</a></li>
@@ -347,8 +331,6 @@
 
         <!-- Main content -->
         <main class="content">
-            <h1 class="page__title">Priyam Gupta</h1>
-
             <p id="about">I am currently a PhD researcher in the <a href="#">Department of Aeronautics</a> at Imperial College London, working at the intersection of machine learning, dynamical systems, and control theory. My research focuses on developing data-driven linear and bilinear models to enable efficient and accurate prediction and control of non-linear chaotic dynamical systems.</p>
 
             <p>My work combines approaches from statistical physics, including Mori&ndash;Zwanzig and Koopman formalism, with modern machine learning techniques to create interpretable reduced-order models. I integrate these models into model predictive control (MPC) and reinforcement learning (RL) frameworks for adaptive, real-time control applications.</p>
