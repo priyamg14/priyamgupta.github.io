@@ -1,0 +1,27 @@
+\documentclass[12pt,a4paper]{report}
+
+% ── Core packages ──────────────────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% graphicx loaded WITHOUT the draft option so figures render in the output PDF.
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% ── Document ───────────────────────────────────────────────────────────────────
+\begin{document}
+
+\title{PhD Thesis}
+\author{Priyam Gupta}
+\maketitle
+
+\tableofcontents
+
+% Chapter 3 – Autonomous data-driven methods
+\input{3.Autonomous/Autonomous}
+
+\end{document}
